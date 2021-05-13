@@ -14,15 +14,20 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # define INSTALL_LOCATION_APP here
 #INSTALL_LOCATION_APP=<fullpathname>
 
-SUPPORT=$(TOP)/..
+# SUPPORT=$(TOP)/..
+SUPPORT=${HOME}/EPICS/support
+
 -include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
 
-ASYN=$(SUPPORT)/asyn4-36
-CALC=$(SUPPORT)/calc-3-7
-PCRE=$(SUPPORT)/pcre-7-2
+# ASYN=$(SUPPORT)/asyn4-36
+ASYN=$(SUPPORT)/asyn
+
+# CALC=$(SUPPORT)/calc-3-7
+# PCRE=$(SUPPORT)/pcre-7-2
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/usr/local/epics/base-7.0.3
+# EPICS_BASE=/usr/local/epics/base-7.0.3
+EPICS_BASE=${HOME}/EPICS/base-7.0
 
 # These lines allow developers to override these RELEASE settings
 # without having to modify this file directly.
